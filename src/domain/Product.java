@@ -1,13 +1,13 @@
-package packagee;
+package domain;
 
 public class Product {
     private String id;
     private String title;
-    private double rate;
+    private float rate;
     private int numberOfReviews;
-    private double price;
+    private float price;
 
-    public Product(String id, String title, double rate, int numberOfReviews, double price) {
+    public Product(String id, String title, float rate, int numberOfReviews, float price) {
         if (rate>5){
             System.out.println("Rate can not be greater than 5");
             System.exit(0);
@@ -20,7 +20,7 @@ public class Product {
             this.price = price;
         }
     }
-
+    
     public String getId() {
         return id;
     }
@@ -36,4 +36,9 @@ public class Product {
     public double getPrice(){
         return price;
     }
+
+    public String allInfo(){
+        return " "+id+" "+title+" "+rate+" "+numberOfReviews+" "+price;
+    }
+    
 }

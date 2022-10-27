@@ -1,13 +1,12 @@
-package packagee;
-
+package domain;
 public class Sales{
-    private int id;
+    private String id;
     private Customer customer;
     private Product product;
     private String salesDate;
     private double salesPrice;
 
-    public Sales(int id, Customer customer, Product product, String salesDate) {
+    public Sales(String id, Customer customer, Product product, String salesDate) {
         this.id = id;
         this.customer = customer;
         this.product = product;
@@ -15,7 +14,7 @@ public class Sales{
         this.salesPrice = product.getPrice()+((product.getRate()/5)*100)*product.getNumberOfReviews();
     }
 
-    public int getId(){
+    public String getId(){
         return id;
     }
 
@@ -33,4 +32,9 @@ public class Sales{
     public double getSalesPrice(){
         return salesPrice;
     }
+    public double getProfit(){
+        return salesPrice-product.getPrice();
+    }
+
+    
 }

@@ -1,4 +1,4 @@
-package packagee;
+package domain;
 
 public class Customer {
     private String id;
@@ -32,3 +32,4 @@ public class Customer {
         return adress;
     }
 }
+
