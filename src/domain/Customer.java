@@ -31,5 +31,8 @@ public class Customer {
     public String getAdress(){
         return adress;
     }
+    public String getAllInfo(){
+        return " "+id+" "+name+" "+email+" "+country+" "+adress;
+    }
 }
 
